@@ -8,11 +8,21 @@ angular.module('app.directives', [
   'app.services'
 ])
 
-.directive('appVersion', [
-  'version'
-
-(version) ->
-
-  (scope, elm, attrs) ->
-    elm.text(version)
+.directive('navBar', [
+  '$location'
+  ($location) ->
+    {
+      restrict: 'A'
+      link: (scope, elem, attrs) ->
+        scope.$watch((-> $location.path()), (newVal, oldVal) ->
+          $('a', elem).each((k, a) ->
+            $a = angular.element(a)
+            regexp = new RegExp('^' + newVal + "$", ['i'])
+            if regexp.test($a.attr('href'))
+              $a.addClass('active')
+            else
+              $a.removeClass('active')
+          )
+        )
+    }
 ])
