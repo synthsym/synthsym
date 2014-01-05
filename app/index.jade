@@ -19,27 +19,7 @@ html(lang='en', ng-app='app')
         enabled: true
       };
     script(src='/js/vendor.js')
-    script(src='/js/partials.js')
     script(src='/js/app.js')
   body(ng-controller='AppCtrl')
-    .wrapper
-      .navbar.navbar-static-top
-        .navbar-inner
-          .container
-            button.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
-              span.icon-bar
-              span.icon-bar
-              span.icon-bar
-            a(href='/').brand Angular Brunch Seed
-            .nav-collapse
-              div(ng-include="'/partials/nav.html'")
-      .container.main-content
-        div(ng-view)
-        div Angular Brunch seed app: v<span app-version></span>
-      .push
-
-    footer.footer
-      .container
-        p
-          small
-            a(href='https://github.com/synthsym/angular-brunch-pretty-birdy') angular-brunch-pretty-birdy | source
+    div.container(ng-include="'/partials/nav.html'")
+    div.container.main-content(ng-view)

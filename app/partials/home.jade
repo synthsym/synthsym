@@ -1,0 +1,11 @@
+div.jumbotron
+  h1 Hello
+  p My name is Adam Jacobus, Web Designer, Programmer and Dystopian novel lover
+
+carousel(interval="interval")
+  slide(ng-repeat="work in works", active="work.active")
+    img(ng-src="work.screenshot")
+    div.carousel-caption
+      h3 {{work.title}}
+      p {{work.desc}}
+     
