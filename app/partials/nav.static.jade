@@ -1,0 +1,12 @@
+nav.navbar.navbar-inverse.navbar-static-top
+  div.navbar-header
+    button.navbar-toggle(ng-init="isCollapsed = false", ng-click="isCollapsed = !isCollapsed")
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+    a.navbar-brand(href='/') SynthSym
+  div.navbar-collapse(collapse="isCollapsed")
+    ul.nav.navbar-nav(nav-bar)
+      li: a(ng-href='#/works') Works
+      li: a(ng-href='#/contrib') Contributions
+      li: a(ng-href='#/contact') Contact
