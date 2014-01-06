@@ -10,8 +10,8 @@ angular.module('app.controllers', [])
   '$resource'
   '$rootScope'
 
-($scope, $location, $resource, $rootScope) ->
-  $scope.isCollapsed = false;  
+  ($scope, $location, $resource, $rootScope) ->
+    $scope
 ])
 
 .controller('HomeCtrl', [
@@ -23,45 +23,24 @@ angular.module('app.controllers', [])
     ]
 ])
 
-.controller('MyCtrl2', [
+.controller('WorksCtrl', [
   '$scope'
 
-($scope) ->
-  $scope
+  ($scope) ->
+    $scope
 ])
 
-.controller('TodoCtrl', [
+.controller('ContribCtrl', [
   '$scope'
 
-($scope) ->
+  ($scope) ->
+    $scope
+])
 
-  $scope.todos = [
-    text: "learn angular"
-    done: true
-  ,
-    text: "build an angular app"
-    done: false
-  ]
+.controller('ContactCtrl', [
+  '$scope'
 
-  $scope.addTodo = ->
-    $scope.todos.push
-      text: $scope.todoText
-      done: false
-
-    $scope.todoText = ""
-
-  $scope.remaining = ->
-    count = 0
-    angular.forEach $scope.todos, (todo) ->
-      count += (if todo.done then 0 else 1)
-
-    count
-
-  $scope.archive = ->
-    oldTodos = $scope.todos
-    $scope.todos = []
-    angular.forEach oldTodos, (todo) ->
-      $scope.todos.push todo  unless todo.done
-
+  ($scope) ->
+    $scope
 ])
 
