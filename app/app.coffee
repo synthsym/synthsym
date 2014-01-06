@@ -18,17 +18,25 @@ App.config([
 ($routeProvider, $locationProvider, config) ->
 
   $routeProvider
-    .when('/home', {
+    .when('/', {
       templateUrl: '/partials/home.html',
       controller: 'HomeCtrl'
     })
-    .when('/view1', {
-      templateUrl: '/partials/partial1.html'
+    .when('/works', {
+      templateUrl: '/partials/works.html',
+      controller: 'WorksCtrl'
     })
-    .when('/view2', {templateUrl: '/partials/partial2.html'})
+    .when('/contrib', {
+      templateUrl: '/partials/works.html',
+      controller: 'ContribCtrl'
+    })
+    .when('/contact', {
+      templateUrl: '/partials/contact.html',
+      controller: 'ContactCtrl'
+    })
 
     # Catch all
-    .otherwise({redirectTo: '/todo'})
+    .otherwise({redirectTo: '/'})
 
   # Without server side support html5 must be disabled.
   $locationProvider.html5Mode(false)
