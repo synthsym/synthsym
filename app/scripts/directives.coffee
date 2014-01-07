@@ -15,13 +15,14 @@ angular.module('app.directives', [
       restrict: 'A'
       link: (scope, elem, attrs) ->
         scope.$watch((-> $location.path()), (newVal, oldVal) ->
-          $('a', elem).each((k, a) ->
-            $a = angular.element(a)
-            regexp = new RegExp('^' + newVal + "$", ['i'])
+          $('li', elem).each((k, li) ->
+            $li = angular.element(li)
+            $a = angular.element($li.children()[0])
+            regexp = new RegExp(newVal + "$", ['i'])
             if regexp.test($a.attr('href'))
-              $a.addClass('active')
+              $li.addClass('active')
             else
-              $a.removeClass('active')
+              $li.removeClass('active')
           )
         )
     }
