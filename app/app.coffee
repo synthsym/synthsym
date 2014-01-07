@@ -4,6 +4,7 @@
 App = angular.module('app', [
   'ngResource'
   'ngRoute'
+  'ngAnimate'
   'app.controllers'
   'app.directives'
   'app.filters'

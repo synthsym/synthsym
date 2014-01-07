@@ -2,7 +2,7 @@ exports.config =
   # See docs at http://brunch.readthedocs.org/en/latest/config.html.
   conventions:
     assets:  /^app\/assets\//
-    ignored: /^(bower_components\/(sass-bootstrap|bootswatch-scss)|app\/styles\/overrides)/
+    ignored: /^(bower_components\/(bootswatch|bootstrap|font-awesome)|app\/styles\/overrides)/
   modules:
     definition: false
     wrapper: false
@@ -18,13 +18,12 @@ exports.config =
       joinTo:
         'css/app.css': /^(app|vendor|bower_components)/
       order:
-        before: [
+        after: [
           'app/styles/app.scss'
         ]
 
   plugins:
-    jaded:
-      staticPatterns: /^app(\/|\\)(.+)\.jade$/
+    jaded: # all optionals
       jade:
         pretty: yes # Adds pretty-indentation whitespaces to output (false by default)
 
