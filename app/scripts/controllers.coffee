@@ -11,7 +11,7 @@ angular.module('app.controllers', [])
   '$rootScope'
 
   ($scope, $location, $resource, $rootScope) ->
-    $scope
+    $scope.Page = Page
 ])
 
 .controller('HomeCtrl', [
@@ -28,6 +28,7 @@ angular.module('app.controllers', [])
 
   ($scope) ->
     $scope
+    Page.setTitle("Synthsym - Works")
 ])
 
 .controller('ContribCtrl', [
@@ -35,4 +36,5 @@ angular.module('app.controllers', [])
 
   ($scope) ->
     $scope
+    Page.setTitle("Synthsym - Contributions")
 ])

@@ -4,4 +4,8 @@
 
 angular.module('app.services', [])
 
-.factory 'version', -> "0.1"
+.factory('Page', function(){
+  var title = 'Synthsym';
+  return {
+    title: function() { return title; },
+    setTitle: function(newTitle) { tit
