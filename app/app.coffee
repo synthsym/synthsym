@@ -31,10 +31,6 @@ App.config([
       templateUrl: '/partials/works.html',
       controller: 'ContribCtrl'
     })
-    .when('/contact', {
-      templateUrl: '/partials/contact.html',
-      controller: 'ContactCtrl'
-    })
 
     # Catch all
     .otherwise({redirectTo: '/'})

@@ -36,11 +36,3 @@ angular.module('app.controllers', [])
   ($scope) ->
     $scope
 ])
-
-.controller('ContactCtrl', [
-  '$scope'
-
-  ($scope) ->
-    $scope
-])
-

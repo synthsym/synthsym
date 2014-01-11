@@ -1,12 +1,13 @@
 nav.navbar.navbar-default.navbar-static-top
   div.navbar-header
     button.navbar-toggle(ng-init="isCollapsed = false", ng-click="isCollapsed = !isCollapsed")
-      span.icon-bar
-      span.icon-bar
-      span.icon-bar
+      i.fa.fa-bars
     a.navbar-brand(href='/') SynthSym
   div.navbar-collapse(collapse="isCollapsed")
     ul.nav.navbar-nav(nav-bar)
       li: a(ng-href='#/works') Works
       li: a(ng-href='#/contrib') Contributions
-      li: a(ng-href='#/contact') Contact
+    ul.nav.navbar-nav.navbar-right
+      li: a(ng-href="http://www.linkedin.com/pub/adam-jacobus/88/265/1b", title="Adam Jacobus on LinkedIn"): i.fa.fa-linkedin.fa-2x
+      li: a(ng-href="http://github.com/synthsym", title="Synthsym on Github"): i.fa.fa-github.fa-2x
+      li: a(ng-href="mailto:synthsym@gmail.com", title="Email Synthsym"): i.fa.fa-envelope.fa-2x

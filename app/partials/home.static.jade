@@ -1,8 +1,21 @@
 div.jumbotron
   h1 Hello!
-  p My name is Adam Jacobus. Web Designer, Programmer and Dystopian novel lover. Creating applications that look and do exactly what they need to.
+  p.lead My name is Adam Jacobus. Web Designer, Programmer and dystopian novel lover. Creating applications that look and work exactly as required.
 
-
+div.container
+  div.row
+    div.col-lg-4
+      i.fa.fa-html5.fa-4x
+      h3 Dynamic Websites
+      p I create websites that are cleverly design, use modern technologies and work on a wide range of devices.
+    div.col-lg-4
+      i.fa.fa-code.fa-4x
+      h3 Brilliant applications
+      p Create application that solve whatever problem you might have.
+    div.col-lg-4
+      i.fa.fa-globe.fa-4x
+      h3 Made in Australia
+      p Proudly based in Brisbane, Australia. Discount rates are available for non-profit organisations.
 
 carousel(interval="interval")
   slide(ng-repeat="work in works", active="work.active")
@@ -10,4 +23,3 @@ carousel(interval="interval")
     div.carousel-caption
       h3 {{work.title}}
       p {{work.desc}}
-     

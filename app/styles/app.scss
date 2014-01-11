@@ -1,3 +1,9 @@
 @import "overrides/_variables.scss";
 @import "overrides/_overrides.scss";
 
+@import "bower_components/font-awesome/scss/font-awesome.scss";
+
+.centerX {
+  display: table-cell;
+  text-align: center;
+}
